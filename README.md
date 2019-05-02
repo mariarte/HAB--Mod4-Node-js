@@ -8,7 +8,7 @@
 
 - [x] Introducción a Node
 
-- [ ] Node avanzado
+- [X] Node avanzado
 
 - [X] REST con Express.js.
 
