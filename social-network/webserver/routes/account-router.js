@@ -1,12 +1,14 @@
-'use strict';
+"use strict";
 
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-const createAccountController = require('../controllers/create-account-controller');
-const checkLoginController = require('../controllers/login-controller')
+const activateAccount = require("../controllers/account/activate-account-controller");
+const createAccountController = require("../controllers/account/create-account-controller");
+const checkLoginController = require("../controllers/account/login-controller");
 
-router.post('/account', createAccountController); // Para crear cuenta
-router.post('/account/login', checkLoginController); // Para hacer el login
+router.post("/account", createAccountController); // Crear cuenta
+router.post("/account/login", checkLoginController); // Hacer el login
+router.get("/account/activate", activateAccount);
 
 module.exports = router;
